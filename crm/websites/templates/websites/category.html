@@ -1,0 +1,25 @@
+{% extends 'websites/layout.html' %}
+
+
+{% block content %}
+    <div class="col-md-10">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">CategoryID</th>
+                <th scope="col">CategoryName</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for category in categoryList %}
+                <tr>
+                    <td>{{ category.id }}</td>
+                    <td>{{ category.categoryName }}</td>
+                    <td>{{ category.Description }}</td>            
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+    </div>
+{% endblock %}

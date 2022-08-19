@@ -1,0 +1,35 @@
+{% extends 'websites/layout.html' %}
+
+
+{% block content %}
+    <div class="col-md-10">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">PaymentID</th>
+                <th scope="col">OrderedID</th>
+                <th scope="col">CustomerName</th>
+                <th scope="col">Total</th>
+                <th scope="col">Paid</th>
+                <th scope="col">Due</th>
+                <th scope="col">LastPaid</th>
+                <th scope="col">PaymentGateway</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for payment, dueAmount, total in payments %}
+                <tr>
+                    <td>{{ payment.id }}</td>
+                    <td>{{ payment.orderId.id }}</td>
+                    <td>{{ payment.orderId.customerName }}</td>
+                    <td>{{ total}} Tk</td>
+                    <td>{{ payment.paidAmount }} Tk</td>
+                    <td>{{ dueAmount}} Tk</td>
+                    <td>{{ payment.paymentAt }}</td>
+                    <td>{{ payment.paymentWay }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'websites/layout.html' %}
+
+
+{% block content %}
+    <div class="col-md-10"><br/><br/>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Email</th>
+                <th scope="col">Organization</th>
+                <th scope="col">JobTitle</th>
+                <th scope="col">Category</th>
+                <th scope="col">PhoneNumber</th>
+                <th scope="col">CreationDate</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for customer in customerList %}
+                <tr>
+                    <td>{{ customer.id }}</td>
+                    <td>{{ customer.customerName }}</td>
+                    <td>{{ customer.address }}</td>
+                    <td>{{ customer.email }}</td>
+                    <td>{{ customer.organizationName }}</td>
+                    <td>{{ customer.jobTitle }}</td>
+                    <td>{{ customer.customerCategory }}</td>
+                    <td>{{ customer.customerPhonenumber }}</td>
+                    <td>{{ customer.created_at }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+    </div>
+{% endblock %}

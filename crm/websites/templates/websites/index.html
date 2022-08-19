@@ -1,0 +1,107 @@
+
+{% extends 'websites/layout.html' %}
+
+  {% block content %}
+
+      <div class="col-md-10">
+        <div class="row mt-4 me-3">
+          <div class="col-sm-4 text-center">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Total Orders</h5>
+                <p class="card-text dashboard-size">{{ totalOrders }}</p>
+                <a href="{% url 'order' %}" target="_blank" class="btn btn-primary my-btn-color">Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 text-center">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Orders Completed</h5>
+                <p class="card-text dashboard-size">{{ totalCompleted }}</p>
+                <a href="{% url 'order' %}" target="_blank" class="btn btn-primary my-btn-color">Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4 text-center">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Total Delivered</h5>
+                <p class="card-text dashboard-size">{{ totalDelivered }}</p>
+                <a href="{% url 'order' %}" target="_blank" class="btn btn-primary my-btn-color">Details</a>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-4 text-center">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Orders Pendings</h5>
+                <p class="card-text dashboard-size">{{ totalPending }}</p>
+                <a href="{% url 'order' %}" target="_blank" class="btn btn-primary my-btn-color">Details</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-sm-4 text-center">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Orders Declined</h5>
+                <p class="card-text dashboard-size">{{ totalDeclined }}</p>
+                <a href="{% url 'order' %}" target="_blank" class="btn btn-primary my-btn-color">Details</a>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <div class="col-sm-4 text-center">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Total Ordered Amount</h5>
+                <p class="card-text dashboard-size">{{ totalAmount }} Tk</p>
+                <a href="{% url 'order' %}" target="_blank" class="btn btn-primary my-btn-color">Details</a>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-sm-4 text-center">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Total Paid Amount</h5>
+                <p class="card-text dashboard-size">{{ totalPayment }} Tk</p>
+                <a href="{% url 'payment' %}" target="_blank" class="btn btn-primary my-btn-color">Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4 text-center">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Total Due Amount</h5>
+                <p class="card-text dashboard-size">{{ totalDue }} Tk</p>
+                <a href="{% url 'payment' %}" target="_blank" class="btn btn-primary my-btn-color">Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4 text-center">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Total Products</h5>
+                <p class="card-text dashboard-size">{{ totalProduct }}</p>
+                <a href="{% url 'product' %}" target="_blank" class="btn btn-primary my-btn-color">Details</a>
+              </div>
+            </div>
+          </div>
+
+          </div>
+        </div>
+        
+  {% endblock %}
+  
